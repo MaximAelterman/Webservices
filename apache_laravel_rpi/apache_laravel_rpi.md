@@ -87,7 +87,7 @@ Na de installatie moet je de mySQL client nog installeren:
 sudo apt-get install mysql-client
 </pre>
 
-###MySQL database importeren
+###phpMyAdmin
 Om gemakkelijk mijn database te beheren heb ik ook phpmyadmin geinstalleerd.
 <pre>
 sudo apt-get install phpmyadmin
@@ -95,13 +95,31 @@ sudo apt-get install phpmyadmin
 
 Tijdens de installatie zal er gevraagd worden welke webserver je geinstalleerd hebt. In ons geval kiezen we dus apache2.
 
-###dbconfig-common configureren
-
 Wanneer volgen venster gegeven, kies je **Yes**.
 
 ![phpmyadmin.jpg](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/apache_laravel_rpi/img/phpmyadmin.jpg)
 
 Ten laatste wordt er gevraagd om een root wachtwoord in te stellen. Ik heb gewoon het zelfde wachtwoord gebruik als bij de apache installatie.
+
+###Includen in apache installatie
+
+phpMyAdmin installeren is niet voldoende om het te laten werken met apache. Open de apache2 conf file:
+
+<pre>
+sudo nano /etc/apache2/apache2.conf
+</pre>
+
+Helemaal onderaan in de file voeg je volgende regel toe: (tip: CTRL + V om per pagina naar beneden te scrollen)
+
+<pre>
+Include /etc/phpmyadmin/apache.conf
+</pre>
+
+Herstart vervolgens je apache server zodat de configuratie wordt toegepast:
+
+<pre>
+sudo /etc/init.d/apache2 restart
+</pre>
 
 Als je nu naar uw website surft en er **/phpmyadmin** achter zet, kom je op de login van phpmyadmin uit!
 
