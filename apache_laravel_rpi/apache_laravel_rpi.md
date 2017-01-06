@@ -2,7 +2,7 @@
 ****
 **Nu gaan we een webserver installeren op onze raspberry pi met als doel later onze website zelf thuis te kunnen hosten.**
 
-**OPMERKING: Indien een van de volgende installatie-pakketten nit beschikbaar zijn doe volgend commando:**
+**OPMERKING: Indien een van de volgende installatie-pakketten niet beschikbaar zijn doe volgend commando:**
 
 <pre>
 sudo apt-get update && sudo apt-get upgrade
@@ -10,7 +10,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 ##1) Apache 2
 
-Apache is de webserver dat we gaan gebruiken omdat deze compatiebel is met het Laravel-framework.
+Apache is de webserver die we gaan gebruiken omdat deze compatibel is met het Laravel-framework.
 
 We beginnen met apache2 te installeren:
 <pre>
@@ -71,7 +71,7 @@ sudo /etc/init.d/apache2 restart
 
 We moeten ervoor zorgen dat we aan onze database kunnen. Ik heb in mijn project MySQL gebruikt en moet dit dus ook op mijn Pi installeren.
 
-MySQL installeren is snel gebeurt:
+MySQL installeren is snel gebeurd:
 
 <pre>
 sudo apt-get install mysql-server
@@ -88,18 +88,18 @@ sudo apt-get install mysql-client
 </pre>
 
 ###phpMyAdmin
-Om gemakkelijk mijn database te beheren heb ik ook phpmyadmin geinstalleerd.
+Om gemakkelijk mijn database te beheren heb ik ook phpmyadmin geïnstalleerd.
 <pre>
 sudo apt-get install phpmyadmin
 </pre>
 
-Tijdens de installatie zal er gevraagd worden welke webserver je geinstalleerd hebt. In ons geval kiezen we dus apache2.
+Tijdens de installatie zal er gevraagd worden welke webserver je geïnstalleerd hebt. In ons geval kiezen we dus apache2.
 
-Wanneer volgen venster gegeven, kies je **Yes**.
+Wanneer het volgende venster gegeven is, kies je **Yes**.
 
 ![phpmyadmin.jpg](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/apache_laravel_rpi/img/phpmyadmin.jpg)
 
-Ten laatste wordt er gevraagd om een root wachtwoord in te stellen. Ik heb gewoon het zelfde wachtwoord gebruik als bij de apache installatie.
+Ten laatste wordt er gevraagd om een root wachtwoord in te stellen. Ik heb gewoon het zelfde wachtwoord gebruikt als bij de apache installatie.
 
 ###Includen in apache installatie
 
@@ -134,18 +134,18 @@ sudo apt-get install php5 php5-cli libapache2-mod-php5 php5-mysql php5-curl php5
 
 ##4) Laravel
 
-Eerst installeren we composer:
+Eerst installeren we Composer:
 
 <pre>
 sudo curl -sS https://getcomposer.org/installer | php
 </pre>
 
-Wanneer de installatie afgerond is, gebruiken we Composer om laravel te installeren:
+Wanneer de installatie afgerond is, gebruiken we Composer om Laravel te installeren:
 <pre>
 sudo ~/composer.phar global require "laravel/installer"
 </pre>
 
-Nu Laravel geinstalleerd is op mijn Pi, kan ik het laravel project dat ik al gemaakt had in de **/var/www** folder kopiëren. Als ik nu naar het Ip van mijn Pi surf, kom ik op mijn Laravel website uit.
+Nu Laravel geïnstalleerd is op mijn Pi, kan ik het Laravel project dat ik al gemaakt had in de **/var/www** folder kopiëren. Als ik nu naar het Ip van mijn Pi surf, kom ik op mijn Laravel website uit.
 
 
 

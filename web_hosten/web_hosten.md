@@ -1,16 +1,16 @@
 #Website hosten op Raspberry Pi (+https)
 ****
-**Nu dat de website nu op mijn raspberry pi staat, kunnen we beginnen met het online te zetten. Om zelf thuis een website te kunnen hosten, moet u toegang hebben tot de router.**
+**Nu dat de website op mijn Raspberry Pi staat, kunnen we beginnen met het online te zetten. Om zelf thuis een website te kunnen hosten, moet u toegang hebben tot de router.**
 
 ##Website online krijgen (http)
 
 ###DNS
 
-Om ervoor te zorgen dat mensen naar uw veranderlijk extern IP kunnen surfen moet je een domein naam aanmaken. Ik gebruikte hiervoor een gratis DNS service: **No-Ip**. 
+Om ervoor te zorgen dat mensen naar uw veranderlijk extern IP kunnen surfen moet je een domeinnaam aanmaken. Ik gebruikte hiervoor een gratis DNS service: **No-Ip**. 
 
 Maak een account aan bij [No-Ip](https://www.noip.com).
 
-Navigeer naar **my account** en dan **Dynamic DNS (free)**. Nu krijg he volgend scherm te zien:
+Navigeer naar **my account** en dan **Dynamic DNS (free)**. Nu krijg je het volgende scherm te zien:
 
 ![dashboard](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/dashboard.png)
 
@@ -20,9 +20,9 @@ Hier klik je op Add Hostname. Nu krijg je volgende popup:
 
 Kies uw gewenste **hostname** en **subdomain**. Als de domeinnaam beschikbaar is kan je op Add Hostname klikken. Je hebt nu een eigen DNS voor jouw website!
 
-Er is wel nog een probleem: Het extern IP-adres van uw router verandert soms en deze DNS wijst naar uw huidig IP. Gelukkig heeft No-Ip hier een tooltje voor dat ons IP-adres geregeld gaat updaten op de No-Ip server. Dit tooltje (DUC) gaan we nu installeren op onze raspberry pi.
+Er is wel nog een probleem: Het extern IP-adres van uw router verandert soms en deze DNS wijst naar uw huidig IP. Gelukkig heeft No-Ip hier een tooltje voor dat ons IP-adres geregeld gaat updaten op de No-Ip server. Dit tooltje (DUC) gaan we nu installeren op onze Raspberry Pi.
 
-Log in op uw raspberry pi en navigeer naar volgende locatie:
+Log in op uw Raspberry Pi en navigeer naar volgende locatie:
 
 <pre>
 cd /usr/local/src/
@@ -34,7 +34,7 @@ Hier gaan we DUC downloaden en installeren:
 sudo wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
 </pre>
 
-De gedownloadde file uitpakken:
+De gedownloade file uitpakken:
 
 <pre>
 tar xf noip-duc-linux.tar.gz
@@ -58,7 +58,7 @@ Installeer het pakket:
 sudo make install
 </pre>
 
-Wanneer de installatie voltooid is, wordt er gevraagd om u in te loggen op No-Ip. Nu update de raspberry pi autonoom zijn extern ip zodat het ip gelinkt met onze domeinnaam altijd klopt. Toch allesinds tot we onze pi herstarten... We moeten dit tooltje dus laten opstarten wanneer de pi boot.
+Wanneer de installatie voltooid is, wordt er gevraagd om u in te loggen op No-Ip. Nu update de Raspberry Pi autonoom zijn extern ip zodat het ip gelinkt met onze domeinnaam altijd klopt. Toch alleszins tot we onze Pi herstarten... We moeten dit tooltje dus laten opstarten wanneer de Pi boot.
 
 Navigeer naar **/etc**:
 
@@ -86,11 +86,11 @@ Je kan nu testen of het werkt door volgend commando uit te voeren:
 sudo noip2 -S
 </pre>
 
-Indien je een geldig PID hebt weet he dat de configuratie gelukt is. Nu gaat jouw domeinnaam altijd naar het juiste IP wijzen.
+Indien je een geldig PID hebt weet je dat de configuratie gelukt is. Nu gaat jouw domeinnaam altijd naar het juiste IP wijzen.
 
 ###Poort forwarden
 
-Als je wilt dat uw website van buitenaf beschikbaar is zal je de nodige configuratie moeten doen in uw router. Zo moet je aan uw router zeggen dat je inkomende http requests wilt accepteren in verwijzen naar de raspberry pi. Onze webserver luistert naar **poort 80** voor http en **poort 443** voor https. Deze twee moeten we dus openen en forwarden naar het ip van onze raspberry pi (moet **statisch IP** hebben).
+Als je wilt dat uw website van buitenaf beschikbaar is zal je de nodige configuratie moeten doen in uw router. Zo moet je aan uw router zeggen dat je inkomende http requests wilt accepteren en doorverwijzen naar de Raspberry Pi. Onze webserver luistert naar **poort 80** voor http en **poort 443** voor https. Deze twee moeten we dus openen en forwarden naar het ip van onze Raspberry Pi (moet **statisch IP** hebben).
 
 **OPMERKING: Volgende stappen zijn afhankelijk van uw ISP. In dit voorbeeld gebruik ik Proximus.**
 
@@ -98,7 +98,7 @@ Surf naar het IP-adres van uw router. In het geval van Proximus is dat standaard
 
 ![home pagina van Proximus](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/proximus1.png)
 
-Navigeer naar **Access Control** en daar naar **Port Mapping**. Klik op **Create Portmap** en zet de service op HTTP, hierdoor wordt het protocol, de external port start en de interne poort automatisch juist gezet. Nu geef je bij **Internal Host** het IP in van uw Pi. Druk op enter en **Ok** om de instellingen op te slaan. Controlleer of deze regel **enabled** is!
+Navigeer naar **Access Control** en daar naar **Port Mapping**. Klik op **Create Portmap** en zet de service op HTTP, hierdoor wordt het protocol, de **external port start** en de interne poort automatisch juist gezet. Nu geef je bij **Internal Host** het IP in van uw Pi. Druk op enter en **Ok** om de instellingen op te slaan. Controleer of deze regel **enabled** is!
 
 ![Port map van Proximus](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/proximus2.png)
 
@@ -146,7 +146,7 @@ Let's encrypt certificaten blijven 90 dagen geldig. Je kan dit handmatig vernieu
 certbot renew --dry-run
 </pre>
 
-Dat was alles! Nu zou mijn webserver geëncrypteerd met ssl. Om te testen zou je nu nog naar uw website moeten surfen met **https://** ervoor.
+Dat was alles! Nu zou mijn webserver geëncrypteerd zijn met ssl. Om te testen zou je nu nog naar uw website moeten surfen met **https://** ervoor.
 
 ###bronnen: 
 

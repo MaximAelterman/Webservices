@@ -2,12 +2,12 @@
 
 ****
 
-**Deze guide gaat er vanuit dat Xampp reeds geinstalleerd is. Indien dit niet het geval is kan u Xampp [hier](https://www.apachefriends.org/index.html "Download Xampp") downloaden.**
+**Deze guide gaat er vanuit dat Xampp reeds geïnstalleerd is. Indien dit niet het geval is kan u Xampp [hier](https://www.apachefriends.org/index.html "Download Xampp") downloaden.**
 
 
 ##1) Composer 
 
-Composer is een PHP package manager dat wordt gebruikt voor Laravel. Dit kunnen we gemakkelijk installeren door de executable te downloaden:
+Composer is een PHP package manager die wordt gebruikt voor Laravel. Dit kunnen we gemakkelijk installeren door de executable te downloaden:
 
 [Download pagina Composer](https://getcomposer.org/download/ "Composer downloads")
 
