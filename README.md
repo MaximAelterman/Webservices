@@ -12,9 +12,9 @@ Ik heb de volgende technologiën gebruikt:
 
 MarkDown's:
 
-- [Laravel met Xammp (Windows)](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/laravel_install/laravel.md)
-- [Apache2 en Laravel op Raspberry Pi 3](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/apache_laravel_rpi/apache_laravel_rpi.md)
-- [Website hosten op Raspberry Pi (+https)]()
+- [Laravel met Xammp (Windows)](https://github.com/MaximAelterman/Webservices/blob/master/laravel_install/laravel.md)
+- [Apache2 en Laravel op Raspberry Pi 3](https://github.com/MaximAelterman/Webservices/tree/master/apache_laravel_rpi/apache_laravel_rpi.md)
+- [Website hosten op Raspberry Pi (+https)](https://github.com/MaximAelterman/Webservices/tree/master/web_hosten/web_hosten.md)
 - [Nagios]()
 
 https://github.com/MaximAelterman/Webservices
