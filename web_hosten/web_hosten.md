@@ -12,11 +12,11 @@ Maak een account aan bij [No-Ip](https://www.noip.com).
 
 Navigeer naar **my account** en dan **Dynamic DNS (free)**. Nu krijg he volgend scherm te zien:
 
-![dashboard](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/img/web_hosten/img/dashboard.png)
+![dashboard](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/dashboard.png)
 
 Hier klik je op Add Hostname. Nu krijg je volgende popup:
 
-![hostname](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/img/web_hosten/img/hostname.png)
+![hostname](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/hostname.png)
 
 Kies uw gewenste **hostname** en **subdomain**. Als de domeinnaam beschikbaar is kan je op Add Hostname klikken. Je hebt nu een eigen DNS voor jouw website!
 
@@ -96,25 +96,25 @@ Als je wilt dat uw website van buitenaf beschikbaar is zal je de nodige configur
 
 Surf naar het IP-adres van uw router. In het geval van Proximus is dat standaard **192.168.1.1**. Je komt nu op de login van uw router. Het wachtwoord vindt u op de router zelf als **user password**. Als je bent ingelogd kom je op volged scherm uit:
 
-![home pagina van Proximus](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/img/web_hosten/img/proximus1.png)
+![home pagina van Proximus](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/proximus1.png)
 
 Navigeer naar **Access Control** en daar naar **Port Mapping**. Klik op **Create Portmap** en zet de service op HTTP, hierdoor wordt het protocol, de external port start en de interne poort automatisch juist gezet. Nu geef je bij **Internal Host** het IP in van uw Pi. Druk op enter en **Ok** om de instellingen op te slaan. Controlleer of deze regel **enabled** is!
 
-![Port map van Proximus](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/img/web_hosten/img/proximus2.png)
+![Port map van Proximus](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/proximus2.png)
 
 Dit zou genoeg moeten zijn om de server extern toegankelijk te maken. Indien dit niet het geval is (zoals bij mij), kan het zijn dat uw ISP standaard poorten 80 en 443 blokkeert. Nu heb je twee keuzes: forwarden naar een andere, niet geblokkeerde, externe poort of de instellingen van uw **Proximus account** aanpassen.
 
 Om deze instelling te veranderen surf je naar de website van [Proximus](https://www.belgacom.be/login/nl/?ru=https%3A%2F%2Fadmit.belgacom.be%2Feservices%2Fwps%2Fmyportal%2FmyProducts%3F_ga%3D1.133387787.405385633.1449847048&pv=fls). Log in en, nu krijg je volgende pagina te zien:
 
-![homepage proximus account](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/img/web_hosten/img/proximus_account1.png)
+![homepage proximus account](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/proximus_account1.png)
 
 Klik op uw internet abonnement (in dit geval **Bizz Internet**). Nu kom je op de pagina waar we het internet abonnement kunnen beheren:
 
-![Internet beheren](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/img/web_hosten/img/proximus_account2.png)
+![Internet beheren](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/proximus_account2.png)
 
 Navigeer naar **Technisch profiel**. Er opent zich een selectie menu waar je de keuze hebt tussen 2 technische profielen: **Basic** en **Normaal**. Kies hier **Basic (De inkomende poorten 80, 443 en 23 zijn geopend)** en klik op **Bevestigen**.
 
-![Technisch profiel](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/img/web_hosten/img/proximus_account3.png)
+![Technisch profiel](https://raw.githubusercontent.com/MaximAelterman/Webservices/master/web_hosten/img/proximus_account3.png)
 
 Nu zou je van buitenaf toegang moeten hebben tot uw website (http). 
 
