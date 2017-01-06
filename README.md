@@ -8,13 +8,13 @@ Ik heb de volgende technologiën gebruikt:
 - Laravel
 - apache
 - https
-- Nagios
+- Fail2Ban
 
 MarkDown's:
 
 - [Laravel met Xammp (Windows)](https://github.com/MaximAelterman/Webservices/blob/master/laravel_install/laravel.md)
 - [Apache2 en Laravel op Raspberry Pi 3](https://github.com/MaximAelterman/Webservices/tree/master/apache_laravel_rpi/apache_laravel_rpi.md)
 - [Website hosten op Raspberry Pi (+https)](https://github.com/MaximAelterman/Webservices/tree/master/web_hosten/web_hosten.md)
-- [Nagios]()
+- [Fail2Ban](https://github.com/MaximAelterman/Webservices/tree/master/fail2ban/fail2ban.md)
 
 https://github.com/MaximAelterman/Webservices
